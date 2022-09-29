@@ -1,0 +1,39 @@
+{% extends 'admin/base.html' %}
+{% block content %}
+    <div>
+        <form action="." method="POST" enctype="multipart/form-data">
+            <select name="type">
+                <option value="Items">Items</option>
+                <option value="Diagnosis">Diagnosis</option>
+            </select>
+            {{ form.as_p }}
+            {% csrf_token %}
+            <button type="submit">Importer le fichier</button>
+        </form>
+
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Category</th>
+                <th scope="col">Diagnostique recommandé</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            {% for rec in recommendations %}
+              <tr>
+                <th scope="row">1</th>
+                <td>{{rec.category}}</td>
+                <td>{{rec.content}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+        
+       
+       
+    </div>
+{% endblock %}
