@@ -19,7 +19,7 @@ from tensorflow import keras
 from tensorflow.keras import layers
 from pathlib import Path
 import matplotlib.pyplot as plt
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 import cv2
 from django.core.files.storage import FileSystemStorage
 import os 
