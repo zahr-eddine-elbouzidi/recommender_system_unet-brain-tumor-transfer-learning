@@ -14,7 +14,7 @@ from django import forms
 import pandas as pd
 import numpy as np
 
-import tensorflow as tf
+#import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from pathlib import Path
