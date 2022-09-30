@@ -1,5 +1,5 @@
 from unicodedata import category
-from attr import field
+#from attr import field
 from django.contrib import admin
 from django.contrib.auth.models import User
 from .models import Diagnosis, Item, Prediction , Category
